@@ -19,7 +19,8 @@ body {
   margin: 0 0 5px;
 }
 
-.page-subtitle {
+.page-subtitle,
+#conteudo {
   color: #ffffff;
   margin-top: 5px;
 }
