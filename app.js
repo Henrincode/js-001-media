@@ -12,6 +12,7 @@ if (media >= 5) {
 }
 
 // 2) Alterar o fundo da tela da maneira que achar mais legal
+document.body.style.backgroundColor = "#04394e";
 
 // 3) Imprimir na própria página o resultado, ao invés do console
 
