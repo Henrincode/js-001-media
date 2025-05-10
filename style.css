@@ -1,11 +1,14 @@
 body {
   font-family: "Roboto Mono", monospace;
   min-height: 400px;
-  background-image: url("bg.png");
   background-color: #000000;
   background-size: 80vh;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+hr {
+  border: 2px solid #ccc;
 }
 
 .container {
@@ -14,13 +17,14 @@ body {
   height: 100vh;
 }
 
-.page-title {
+.page-title,
+#converterTemp h1 {
   color: #ffffff;
   margin: 0 0 5px;
 }
 
-.page-subtitle,
-#conteudo {
+/* prettier-ignore */
+.page-subtitle, #mediaNotas {
   color: #ffffff;
   margin-top: 5px;
 }
@@ -34,4 +38,38 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+#converterTemp {
+  padding-top: 15px;
+}
+
+#converterTemp p {
+  color: #fff;
+  font-size: 18px;
+}
+
+#converterTemp button {
+  font-size: 20;
+  padding: 10px;
+  width: 200;
+  border: 4px #bbbbbb solid;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+#converterTemp button:hover {
+  background-color: aquamarine;
+}
+
+#converterTemp input {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20;
+  padding: 10px;
+  width: 200;
+  border: 4px #bbbbbb solid;
+  cursor: pointer;
+  border-radius: 20px;
 }
