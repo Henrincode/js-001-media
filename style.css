@@ -29,12 +29,65 @@ hr {
   margin-top: 5px;
 }
 
+#calcNome {
+  margin-top: 15px;
+  font-size: 15;
+  font-weight: bold;
+  padding: 10px;
+  width: 180;
+  border: 4px #bbbbbb solid;
+  border-radius: 20px;
+}
+
+.calcNota {
+  width: 90;
+  margin-top: 15px;
+  font-size: 15;
+  font-weight: bold;
+  padding: 10px;
+  border: 4px #bbbbbb solid;
+  border-radius: 20px;
+}
+
+#calcBotao {
+  font-size: 20;
+  padding: 10px;
+  width: 300;
+  border: 4px #bbbbbb solid;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.passou {
+  color: greenyellow;
+}
+
+.reprovou {
+  color: red;
+}
+
+.campoVazio {
+  color: yellow;
+}
+
 #converterTemp {
   padding-top: 15px;
 }
 
 #converterTemp p {
   font-size: 18px;
+}
+
+#converterTemp input {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20;
+  padding: 10px;
+  width: 200;
+  border: 4px #bbbbbb solid;
+  border-radius: 20px;
 }
 
 #converterTemp button {
@@ -47,16 +100,7 @@ hr {
   border-radius: 20px;
 }
 
+#calcBotao:hover,
 #converterTemp button:hover {
   background-color: aquamarine;
-}
-
-#converterTemp input {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 20;
-  padding: 10px;
-  width: 200;
-  border: 4px #bbbbbb solid;
-  border-radius: 20px;
 }

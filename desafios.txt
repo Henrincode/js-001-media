@@ -1,4 +1,4 @@
-FEITO 1 ) Dependendo da nota, mostrar se a aluna ou aluno foi aprovada(o) ou não
+1) Dependendo da nota, mostrar se a aluna ou aluno foi aprovada(o) ou não
 
 2) Alterar o fundo da tela da maneira que achar mais legal
 

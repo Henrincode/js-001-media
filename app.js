@@ -15,25 +15,33 @@ document.body.style.backgroundColor = "#04394e";
 
 // 3) Imprimir na própria página o resultado, ao invés do console
 
-// cria a mensagem com a média formatada
-let mensagemMedia = `A média é: ${media.toFixed(2)}.`;
+// referências
+const calcBotao = document.getElementById("calcBotao");
+const mediaNotas = document.getElementById("mediaNotas");
 
-// define a mensagem de aprovação ou reprovação com base na média
-let mensagemAprovadoReprovado;
+calcBotao.onclick = e => {
+  // referências
+  const calcNome = document.getElementById("calcNome").value;
+  const calcnota1 = parseFloat(document.getElementById("calcNota1").value);
+  const calcnota2 = parseFloat(document.getElementById("calcNota2").value);
+  const calcnota3 = parseFloat(document.getElementById("calcNota3").value);
+  const calcnota4 = parseFloat(document.getElementById("calcNota4").value);
 
-if (media >= 5) {
-  mensagemAprovadoReprovado = "Parabéns, você passou";
-} else {
-  mensagemAprovadoReprovado = "Que pena, volte na próxima";
-}
+  // verifica se todos os campos estão preenchidos
+  if (calcNome && calcnota1 && calcnota2 && calcnota3 && calcnota4) {
+    const media = (calcnota1 + calcnota2 + calcnota3 + calcnota4) / 4;
 
-// obtém a referência ao elemento HTML onde o resultado será exibido
-let mediaNotas = document.getElementById("mediaNotas");
-
-// insere o conteúdo HTML gerado dentro da div com id "conteudo"
-mediaNotas.innerHTML = `
-    <p>${mensagemMedia}<br>
-    ${mensagemAprovadoReprovado}</p>`;
+    if (media >= 5) {
+      mediaNotas.innerHTML = `<p class="passou">Parabéns! ${calcNome} passou de ano com 
+      uma média de ${media.toFixed(2)}</p>`;
+    } else {
+      mediaNotas.innerHTML = `<p class="reprovou">Que peninha! ${calcNome} reprovou de ano com 
+      uma média de ${media.toFixed(2)}</p>`;
+    }
+  } else {
+    mediaNotas.innerHTML = `<p class="campoVazio">Preencha todos os campos</p>`;
+  }
+};
 
 // 4) Criar um conversor de temperaturas entre farenheit e celcius
 // obtém a referência ao elemento HTML onde o resultado será exibido
@@ -53,7 +61,7 @@ botaoCelcius.onclick = e => {
     // se valor digitado imprime mensagem se não pede para digitar
     converterTempP.innerHTML = mensagem;
   } else {
-    converterTempP.innerHTML = "Digite um número para efetuar o cálculo";
+    converterTempP.innerHTML = `<p class="campoVazio">Digite um número para efetuar o cálculo</p>`;
   }
 };
 
@@ -67,7 +75,7 @@ botaoFahrenheit.onclick = e => {
     // se valor digitado imprime mensagem se não pede para digitar
     converterTempP.innerHTML = mensagem;
   } else {
-    converterTempP.innerHTML = "Digite um número para efetuar o cálculo";
+    converterTempP.innerHTML = `<p class="campoVazio">Digite um número para efetuar o cálculo</p>`;
   }
 };
 
@@ -75,5 +83,9 @@ botaoFahrenheit.onclick = e => {
 
 /*
 a conta foi colocada na linha 2 para não quebrar o código, ficando assim:
+
+
 let n1 = 7, n2 = 5.5, n3 = 2, n4 = 4, media = (n1 + n2 + n3 + n4) / 4;
+
+
 */
